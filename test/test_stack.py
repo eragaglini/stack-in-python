@@ -27,3 +27,9 @@ def test_pop(stack):
     assert stack.pop() == "hello"
     with pytest.raises(IndexError):
         stack.pop()
+
+def test_peek(stack):
+    stack.push("hello")
+    assert stack.peek() == "hello"
+    stack.pop()
+    assert stack.peek() == None

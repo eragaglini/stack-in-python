@@ -14,3 +14,9 @@ class Stack:
             return self._storage.pop()
         except IndexError:
             raise IndexError('pop from empty stack')
+
+    def peek(self):
+        if len(self._storage) == 0:
+            return None
+        else:
+            return self._storage[-1]
