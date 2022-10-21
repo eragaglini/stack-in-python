@@ -33,3 +33,8 @@ def test_peek(stack):
     assert stack.peek() == "hello"
     stack.pop()
     assert stack.peek() == None
+
+def test_is_empty(stack):
+    assert stack.is_empty()
+    stack.push(10)
+    assert not stack.is_empty()

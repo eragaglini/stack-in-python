@@ -20,3 +20,9 @@ class Stack:
             return None
         else:
             return self._storage[-1]
+
+    def is_empty(self):
+        if len(self._storage) == 0:
+            return True
+        else:
+            return False
