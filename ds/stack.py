@@ -1,28 +1,28 @@
 class Stack:
 
     def __init__(self) -> None:
-        self._storage = []
+        self.__storage = []
 
     def __len__(self) -> int:
-        return len(self._storage)
+        return len(self.__storage)
 
     def push(self, item) -> None:
-        self._storage.append(item)
+        self.__storage.append(item)
 
     def pop(self):
         try:
-            return self._storage.pop()
+            return self.__storage.pop()
         except IndexError:
             raise IndexError('pop from empty stack')
 
     def peek(self):
-        if len(self._storage) == 0:
+        if len(self.__storage) == 0:
             return None
         else:
-            return self._storage[-1]
+            return self.__storage[-1]
 
     def is_empty(self):
-        if len(self._storage) == 0:
+        if len(self.__storage) == 0:
             return True
         else:
             return False
